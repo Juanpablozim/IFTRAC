@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1></h1>
+
+    <div clss="formSeguro" id="formPontoPerigoso">
+
+      <div class="inicial">Voltar à <a href="index.html">Página Inicial</a></div>
+      
+        <a href="pontos.html"><button class="botao" id="btnLocalAtual">Visualizar</button></a><br>
+
+        <div class="inputBox">
+            <input class="formPonto" type="text" id="campoRua" name="campoRua" required><label class="labelPonto"
+                for="campoRua">Rua:</label>
+        </div>
+
+        <div class="inputBox">
+            <input class="formPonto" type="text" id="campoNumero" name="campoNumero" required><label class="labelPonto"
+                for="campoNumero">Numero:</label>
+        </div>
+
+        <div class="inputBox">
+            <input class="formPonto" type="text" id="campoBairro" name="campoBairro" required><label class="labelPonto"
+                for="campoBairro">Bairro:</label>
+        </div>
+
+        <div class="inputBox">
+            <input class="formPonto" type="text" id="campoCidade" name="campoBairro" required><label class="labelPonto"
+                for="campoCidade">Cidade:</label>
+        </div>
+
+        <div class="inputBox">
+            <input class="formPonto" type="text" id="campoUF" name="campoUF" required><label class="labelPonto"
+                for="campoUF">UF:</label>
+        </div>
+
+        <div class="inputBox">
+            <textarea class="formPontog" rows="2" cols="30" id="campoMore" name="campoMore" required></textarea><label class="labelTA"
+                for="campoMore">Informações do ocorrido:</label>
+        </div>
+
+        <div class="combinacao">
+            <input type="radio" id="ponto" name="tipoPonto" checked><label for="ponto">Ponto de Ônibus</label>
+        </div>
+
+        <div class="combinacao">
+            <input type="radio" id="local" name="tipoPonto"><label for="local">Local de espera</label>
+        </div>
+
+        <button class="botao" id="enviar">Salvar</button>
+
+    </div>
+
+
+    <script src="BD_PontosPerigosos.js"></script>
+
+</body>
+
+</html>
