@@ -33,6 +33,11 @@
   justify-content: center;
 }
 
+/*
+  CORPO
+*/
+
+/* botao de denuncia */
 .btncadastrar{
   font-size: 20px;
   color: white;
@@ -43,9 +48,16 @@
   border-radius: 30px;
 }
 
+/* DESTAQUES */
+
+a {
+  text-decoration: none;
+}
+
 .destaque {
   margin-top: 30px;
   border: 3px solid #ff008c;
+  border-radius: 10px;
   min-height: calc(80vh - 30px);
   margin-left: 10px;
   margin-right: 10px;
@@ -59,6 +71,7 @@
 
 .destacado {
   border: 3px solid #505050;
+  border-radius: 10px;
   margin: 20px;
   padding: 10px;
 }
