@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar {
+  background: #ff00bf;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navitem {
+  padding: 10px 50px 10px 50px;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.btnnavbar {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#tipo{
+  font-size: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
+  color: #ff0077;
+}
+
+#endereco{
+  color: #5c5c5c;
+  font: 20px;
+  margin: 20px;
+}
+
+#moreinfo{
+  margin: 20px;
+}

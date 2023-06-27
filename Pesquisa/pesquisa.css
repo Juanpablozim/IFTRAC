@@ -1,0 +1,110 @@
+/*
+    DOCUMENTO
+*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+body {
+    background: pink;
+    color: palevioletred;
+}
+
+/*
+    NAVBAR
+*/
+
+.navbar {
+    background: #ff00bf;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navitem {
+    padding: 10px 50px 10px 50px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.navitem i {
+    color: white;
+}
+
+.btnnavbar {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/*
+    BARRA DE PESQUISA
+*/
+.search-box {
+    width: 80%;
+    background: aliceblue;
+    margin: 50px auto 0;
+    border-radius: 5px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+input {
+    flex: 1;
+    height: 50px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    color: palevioletred;
+}
+
+button {
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+button i {
+    width: 25px;
+    color: palevioletred;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: palevioletred;
+}
+
+.result-box ul {
+    border-top: 1px solid #999;
+    padding: 15px 10px;
+}
+
+.result-box ul li {
+    list-style: none;
+    border-radius: 3px;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.result-box ul li:hover {
+    background: pink;
+}
+
+.result-box {
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+#gosearch i.fa-x {
+    display: none;
+}

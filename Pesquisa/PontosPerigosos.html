@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="PontosPerigosos.css">
+    <title>Ponto Perigoso</title>
 </head>
 
 <body>
@@ -14,7 +14,17 @@
 
     <div clss="formSeguro" id="formPontoPerigoso">
 
-      <div class="inicial">Voltar à <a href="../index.html">Página Inicial</a></div>
+      <div class="inicial">Voltar à <a href="index.html">Página Inicial</a></div>
+      
+        <a href="VisualizarPontos.html"><button class="botao" id="btnLocalAtual">Visualizar</button></a><br>
+
+        <div class="combinacaolado">
+            <input type="radio" id="rua" name="tiporuaav" checked><label for="rua">Rua</label>
+        </div>
+
+        <div class="combinacaolado">
+            <input type="radio" id="av" name="tiporuaav"><label for="av">Avenida</label>
+        </div>
 
         <div class="inputBox">
             <input class="formPonto" type="text" id="campoRua" name="campoRua" required><label class="labelPonto"
@@ -54,12 +64,13 @@
             <input type="radio" id="local" name="tipoPonto"><label for="local">Local de espera</label>
         </div>
 
+      <div id="enviado"></div>
         <button class="botao" id="enviar">Salvar</button>
 
     </div>
 
 
-    <script src="BD_PontosPerigosos.js"></script>
+    <script src="PontosPerigosos.js"></script>
 
 </body>
 
