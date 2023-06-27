@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar {
+  background: #ff00bf;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navitem {
+  padding: 10px 50px 10px 50px;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.btnnavbar {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.aplicacoes{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.btncadastrar{
+  font-size: 20px;
+  color: white;
+  width: 300px;
+  border: none;
+  background-color: #ff00bf;
+  height: 40px;
+  border-radius: 30px;
+}
+
+.destaque {
+  margin-top: 30px;
+  border: 3px solid #ff008c;
+  min-height: calc(80vh - 30px);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.destaque h1{
+  margin: 10px;
+  color: #ff008c;
+  text-align: center;
+}
+
+.destacado {
+  border: 3px solid #505050;
+  margin: 20px;
+  padding: 10px;
+}
+
+.destaque h2{
+  color: #505050;
+  font-size: 10px;
+}
+
+.destaque h3{
+  color: rgb(27, 27, 27);
+  font-size: 14px;
+  margin-bottom: 3px;
+  border-bottom: 1px solid gray;
+}
+
+.destaque h4{
+  color: #ff008c;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+#destacados {
+  max-height: calc(70vh - 30px);
+  overflow-y: scroll;
+}
