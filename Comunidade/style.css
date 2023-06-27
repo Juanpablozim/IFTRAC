@@ -1,0 +1,27 @@
+.HTML{
+    background-color: rgba(255, 121, 143, 0.5);
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.h1{
+    text-align: center;
+}
+.cards {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.carai {
+    background-color: aqua;
+}
+.bg-pink {
+    background-color: pink;
+}
+body{
+    background-color: rgba(255, 121, 143, 0.5);
+}
+#principal{
+    background-color: rgba(221, 120, 204, 0.534);
+}
