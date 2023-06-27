@@ -1,5 +1,7 @@
+const dbName = 'unsafePoints';
+
 function leDados () {
-    let strDados = localStorage.getItem('db');
+    let strDados = localStorage.getItem(dbName);
     let objDados = {};
 
     if (strDados) {
@@ -16,7 +18,7 @@ function leDados () {
 }
 
 function salvaDados (dados) {
-    localStorage.setItem('db', JSON.stringify(dados));
+    localStorage.setItem(dbName, JSON.stringify(dados));
 }
 
 function incluirPonto () {

@@ -1,22 +1,22 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(to right, rgb(245, 86, 184), rgb(250, 170, 226));
+    background-color: rgb(255, 0, 119);
 }
 
 #formPontoPerigoso {
-    color:aliceblue;
+    color: aliceblue;
     position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.2);
     padding: 15px 3%;
+    max-height: calc(100vh - 50px);
     border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .inputBox{
     position: relative;
-    margin: 30px 0px;
+    margin: 23px 0px;
 }
 
 .formPonto{
@@ -30,6 +30,7 @@ body{
 }
 
 .labelPonto {
+    font-size: 15px;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -41,7 +42,7 @@ body{
 .formPonto:valid ~ .labelPonto{
     top: -20px;
     font-size: 12px;
-    color: rgb(184, 0, 138);
+    color: rgb(0, 0, 0);
 }
 
 .botao{
@@ -63,8 +64,8 @@ body{
     padding: 8px;
 }
 
-.butao:hover{
-    background-image: linear-gradient(to right, rgb(230, 1, 142), rgb(255, 4, 159));;
+.botao:hover{
+    background-image: linear-gradient(to right, rgb(255, 0, 111), rgb(255, 4, 159));;
 }
 
 .combinacao{
@@ -106,6 +107,7 @@ textarea{
 }
 
 .labelTA {
+    font-size: 15px;
     margin-top: 10px;
     position: absolute;
     top: -20px;
@@ -140,3 +142,97 @@ h1{
 .inicial a{
   color: rgb(138, 0, 103);
 }
+
+#enviado{
+  color: #ff007b;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+
+
+
+
+.combinacaolado{
+    margin: 10px;
+    display: inline-block;
+}
+
+.combinacaolado input{
+    display: none;
+}
+
+.combinacaolado input + label:before{
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid gray;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+
+.combinacaolado input:checked + label:before{
+    background-color: rgb(255, 4, 159);
+    box-sizing: border-box;
+    border: 5px solid white;
+    padding: 4px;
+}
+
+/*
+@media screen and (max-width: 600px) {
+    body{
+        background-color: rgb(255, 0, 119);
+    }
+    
+    .formPonto{
+        font-size: 10px;
+    }
+
+    .botao{
+        padding: 3px;
+    }
+
+    textarea{
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .labelTA {
+        font-size: 12px;
+    }
+
+    .labelPonto {
+        font-size: 12px;
+    }
+
+    .formPonto:focus ~ .labelPonto,
+    .formPonto:valid ~ .labelPonto{
+        top: -10px;
+        font-size: 10px;
+    }
+
+    .inputBox{
+        margin: 13px 0px;
+    }
+
+    .combinacaolado{
+        margin: 5px;
+        display: block;
+    }
+
+    .inicial{
+        font-size: 12px;
+    }
+
+    #formPontoPerigoso {
+        max-width: calc(70vh - 0px);
+        max-height: calc(100vh -30px);
+        background-color: transparent;
+    }
+}
+*/

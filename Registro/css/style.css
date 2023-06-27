@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
-    color: #323232;
+    color: #fff;
     border: none;
 }
 
@@ -18,24 +18,29 @@ input:focus, label:focus{
 }
 
 a{
-    color: #e60084;
+    color: black;
 }
 
 body{
     padding: 5vh;
-    background-image: url('../img/bg-register-page.jpg');
-    background-size: cover;
-    background-position-y: -150px;
+    background-color: rgb(255, 0, 119);
 }
 
 /* Form */
+.inicial{
+    margin: 5px;
+    text-align: center;
+}
+
 #main-container{
-    width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 25px;
+    color: aliceblue;
+    position: absolute;
+    padding: 15px 3%;
+    max-height: calc(100vh - 50px);
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #main-container h1{
@@ -54,7 +59,6 @@ form{
 .full-box{
     flex: 1 1 100%;
     position: relative;
-
 }
 
 .half-box{
@@ -83,8 +87,10 @@ input:focus{
 }
 
 input[type="submit"]{
-    background-color: #e60084;
-    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    color: #e60084;
     border: none;
     border-radius: 20px;
     height: 40px;
@@ -102,6 +108,8 @@ input[type="submit"]{
 
 /* Form */
 .error-validation{
+    padding: 5px;
+    background-color: #fff;
     color: #FF1A1A;
     position: absolute;
     top: 57px;
@@ -110,4 +118,25 @@ input[type="submit"]{
 
 .template{
     display: none;
+}
+
+/* Redimencionameto para telas com largura entre 600px e 1200px */
+@media (min-width: 601px) and (max-width: 1200px) {
+
+}
+
+/* Redimencionameto para telas com largura ate 600px*/
+@media (max-width: 600px) {
+    #main-container{
+        width: 80%;
+    }
+
+    .inicial{
+        font-size: 12px;
+    }
+
+    .half-box{
+        flex: 1 1 100%;
+        position: relative;
+    }
 }
