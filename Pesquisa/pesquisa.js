@@ -96,7 +96,7 @@ function display(result) {
 function selectInput(list) {
     inputBox.value = list.innerHTML;
     const id = list.getAttribute("data-id");
-    window.location = "moreinfo.html?id=" + id;
+    window.location = "mais-informacoes/moreinfo.html?id=" + id;
 }
 
 function cleansearchbar(){
