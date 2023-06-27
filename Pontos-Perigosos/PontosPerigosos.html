@@ -14,11 +14,19 @@
 
     <div clss="formSeguro" id="formPontoPerigoso">
 
-      <div class="inicial">Voltar à <a href="../index.html">Página Inicial</a></div>
+        <div class="inicial">Voltar à <a href="../index.html">Página Inicial</a></div>
+
+        <div class="combinacaolado">
+            <input type="radio" id="rua" name="tiporuaav" checked><label for="rua">Rua</label>
+        </div>
+
+        <div class="combinacaolado">
+            <input type="radio" id="av" name="tiporuaav"><label for="av">Avenida</label>
+        </div>
 
         <div class="inputBox">
             <input class="formPonto" type="text" id="campoRua" name="campoRua" required><label class="labelPonto"
-                for="campoRua">Rua:</label>
+                for="campoRua">Logradouro:</label>
         </div>
 
         <div class="inputBox">
@@ -42,8 +50,8 @@
         </div>
 
         <div class="inputBox">
-            <textarea class="formPontog" rows="2" cols="30" id="campoMore" name="campoMore" required></textarea><label class="labelTA"
-                for="campoMore">Informações do ocorrido:</label>
+            <textarea class="formPontog" rows="2" cols="30" id="campoMore" name="campoMore" required></textarea><label
+                class="labelTA" for="campoMore">Informações do ocorrido:</label>
         </div>
 
         <div class="combinacao">
@@ -53,6 +61,8 @@
         <div class="combinacao">
             <input type="radio" id="local" name="tipoPonto"><label for="local">Local de espera</label>
         </div>
+
+        <div id="msgenvio" class="msgenvio"></div>
 
         <button class="botao" id="enviar">Salvar</button>
 

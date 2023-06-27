@@ -67,7 +67,7 @@ function salvaDados(dados) {
     document.getElementById('campoMore').value = "";
     
     // mensagem de confirmacao
-    document.getElementById('enviado').innerHTML = "Conteúdo salvo";
+    document.getElementById('msgenvio').innerHTML = `<div class="msgenviado">Conteúdo enviado</div>`;
 }
 
 function incluirPonto() {

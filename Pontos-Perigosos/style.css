@@ -46,26 +46,32 @@ body{
 }
 
 .botao{
-    background-image:  linear-gradient(to right, rgb(182, 6, 114), rgb(255, 4, 180));
-    color: aliceblue;
     width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    color: #e60084;
     border: none;
+    border-radius: 20px;
+    height: 40px;
     cursor: pointer;
-    border-radius: 10px;
-    padding: 15px;
 }
 
-.botaop {
-    background-image:  linear-gradient(to right, rgb(182, 6, 114), rgb(255, 4, 180));
-    color: aliceblue;
+.botaop {    
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: white;
+    color: #e60084;
     border: none;
+    border-radius: 20px;
+    height: 40px;
     cursor: pointer;
-    border-radius: 10px;
-    padding: 8px;
 }
 
 .botao:hover{
     background-image: linear-gradient(to right, rgb(255, 0, 111), rgb(255, 4, 159));;
+    color: white;
 }
 
 .combinacao{
@@ -181,6 +187,16 @@ h1{
     box-sizing: border-box;
     border: 5px solid white;
     padding: 4px;
+}
+
+.msgenviado{
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    padding: 3px;
+    margin: 3px;
+    background-color: white;
+    color: rgb(255, 4, 159);
 }
 
 /*

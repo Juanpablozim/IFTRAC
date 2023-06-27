@@ -63,7 +63,7 @@ function imprimeDados () {
     let contador = 0;
 
     for ( i=(objDados.pontos.length-1); (i>=0) && (contador<10); i=i-1 ) {
-        strHTML += `<a href="Pesquisa/mais-informacoes/moreinfo.html?id=${objDados.pontos[i].id}" onclick='selectInput(this)'><div class="destacado"><h4>${objDados.pontos[i].tipo}</h4><h3>${objDados.pontos[i].more}</h3><h2>${objDados.pontos[i].rua}, ${objDados.pontos[i].numero} - ${objDados.pontos[i].bairro}, ${objDados.pontos[i].cidade} - ${objDados.pontos[i].uf}</h2></div></a>`;
+        strHTML += `<a href="Pesquisa/mais-informacoes/moreinfo.html?id=${objDados.pontos[i].id}" onclick='selectInput(this)'><div class="destacado"><h4>${objDados.pontos[i].tipo}</h4><h2>${objDados.pontos[i].rua}, ${objDados.pontos[i].numero} - ${objDados.pontos[i].bairro}, ${objDados.pontos[i].cidade} - ${objDados.pontos[i].uf}</h2><h3>${objDados.pontos[i].more}</h3></div></a>`;
         contador = contador + 1;
     }
 
