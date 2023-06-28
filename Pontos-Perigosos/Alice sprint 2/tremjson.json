@@ -1,0 +1,16 @@
+{
+    "pontos": [
+        {
+            "nome": "Ponto Avenida Trinta e Um de Março",
+            "imagem": "ponto1.jpg"
+        },
+        {
+            "nome": "Ponto Amazonas",
+            "imagem": "ponto2.jpg"
+        },
+        {
+            "nome": "Ponto Esquinão",
+            "imagem": "ponto3.jpg"
+        }
+    ]
+}
