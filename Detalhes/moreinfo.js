@@ -84,3 +84,52 @@ function display(result) {
 }
 
 carregaDados();
+
+// JSON com os comentários
+var comentarios = {
+    "comentarios": []
+};
+
+// Função para enviar o comentário
+function enviarComentario() {
+    var id = 1;
+    var ittenid = idrecebido;
+    var nome = 'Username';
+    var comentario = document.getElementById("comentario").value;
+    if (nome !== "" && comentario !== "") {
+        var novoComentario = {
+            "id": id,
+            "ittenid": ittenid,
+            "nome": nome,
+            "comentario": comentario
+        };
+        comentarios.comentarios.push(novoComentario);
+        document.getElementById("comentario").value = "";
+        atualizarComentarios();
+    }
+}
+
+// Função para atualizar a lista de comentários
+function atualizarComentarios() {
+    var listaComentarios = document.getElementById("listaComentarios");
+
+    let comenttxt = "";
+    
+    for (var i = 0; i < comentarios.comentarios.length; i++) {
+        var comentario = comentarios.comentarios[i];
+        if ( comentario.ittenid == idrecebido ) {
+            comenttxt += `<div class="loadedcomment"><strong>${comentario.nome}: </strong>${comentario.comentario}</div>`;
+        }
+    }
+
+    listaComentarios.innerHTML = comenttxt;
+    
+    localStorage.setItem("comentarios", JSON.stringify(comentarios));
+}
+
+// Verifica se há comentários salvos no localStorage
+var comentariosSalvos = localStorage.getItem("comentarios");
+if (comentariosSalvos !== null) {
+    comentarios = JSON.parse(comentariosSalvos);
+    atualizarComentarios();
+}

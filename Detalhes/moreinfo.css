@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*
+  NAVBAR
+*/
+
+.navbar {
+  background: #ff00bf;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navitem {
+  padding: 10px 50px 10px 50px;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.btnnavbar {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/*
+    MAIS DETALHES
+*/
+
+/* Tipo de endereco */
+#tipo{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
+  color: #ff0077;
+}
+
+/* Endereco */
+#endereco{
+  font-weight: bold;
+  text-align: center;
+  color: #424242;
+  font: 20px;
+  margin: 20px;
+}
+
+/* Mais informacoes */
+#moreinfo{
+  text-align: center;
+  margin: 20px;
+}
+
+/*
+    COMENTARIOS
+*/
+
+.comments {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #e24a7c;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 18px;
+  color: #e24a7c;
+  margin-bottom: 10px;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+button[type="button"] {
+  background-color: #e24a7c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button[type="button"]:hover {
+  background-color: #c0392b;
+}
+
+.comentario {
+  background-color: #f5d3e8;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.nome {
+  font-weight: bold;
+  color: #e24a7c;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0px;
+}
+
+textarea {
+  width: 100%;
+  height: 50px;
+  border: 2px solid hotpink;
+  resize: none;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#nome {
+  border: 2px solid hotpink;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.loadedcomment{
+  margin: 10px;
+}
+
+@media screen and (min-width: 1201px) {
+  textarea {
+    font-size: 18px;
+  }
+
+  #endereco{
+    font-size: 18px;
+  }
+
+  .loadedcomment{
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  textarea {
+    font-size: 15px;
+  }
+
+  #endereco{
+    font-size: 18px;
+  }
+
+  .loadedcomment{
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  textarea {
+    font-size: 12px;
+  }
+
+  #endereco{
+    font-size: 18px;
+  }
+  
+  .loadedcomment{
+    font-size: 18px;
+  }
+}
