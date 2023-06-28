@@ -4,7 +4,7 @@
   <title>Denunciar Motoristas Abusivos</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body onload="colocaPlaca()">
   <h1>Denunciar Motoristas Abusivos</h1>
 
   <div class="container">
@@ -14,9 +14,18 @@
         <input type="text" id="nome" required>
       </div>
 
-      <div class="form-group">
-        <label for="placa">Placa:</label>
-        <input type="text" id="placa" required>
+      <div class="combinacao">
+        <input type="radio" id="ponto" name="tipoPonto" checked><label onclick="colocaPlaca()" for="ponto">Motorista de aplicativo</label>
+    </div>
+
+    <div class="combinacao">
+        <input type="radio" id="local" name="tipoPonto"><label onclick="colocaLinha()" for="local">Motorista de ônibus</label>
+    </div>
+
+      <div class="form-group" id="divPlaca">
+      </div>
+
+      <div class="form-group" id="divLinha">
       </div>
 
       <div class="form-group">

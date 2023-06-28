@@ -60,3 +60,23 @@ if (localStorage.getItem('denuncias')) {
   denuncias = JSON.parse(localStorage.getItem('denuncias'));
   exibirDenuncias();
 }
+
+function colocaPlaca(){
+  let divPlaca = document.getElementById("divPlaca");
+  let divLinha = document.getElementById("divLinha");
+
+  divLinha.innerHTML = "";
+  divPlaca.innerHTML = `<label for="placa">Placa:</label><input type="text" id="placa" required><label for="placa">`;
+}
+
+function colocaLinha(){
+  let divPlaca = document.getElementById("divPlaca");
+  let divLinha = document.getElementById("divLinha");
+
+  divLinha.innerHTML = `
+  <label for="Linha">Linha:</label>
+  <input type="text" id="Linha" required>
+  <label for="Linha">Data e horário (Clique no calendário):</label>
+  <input type="datetime-local" id="Horario" name="data-hora" class="DateTime" required>`;
+  divPlaca.innerHTML = "";
+}

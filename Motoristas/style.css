@@ -26,6 +26,7 @@ body {
   }
   
   label {
+    margin-top: 10px;
     display: block;
     font-weight: bold;
     color: #ff1493;
@@ -34,14 +35,15 @@ body {
   
   input[type="text"],
   textarea {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    resize: none;
   }
   
   textarea {
-    height: 150px;
+    height: 50px;
   }
   
   button {
@@ -72,3 +74,41 @@ body {
     color: #555;
   }
   
+  /* COMBINAÇÃO */
+
+  .combinacao{
+    margin: 10px;
+}
+
+.combinacao input{
+    display: none;
+}
+
+.combinacao input + label:before{
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid gray;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+
+.combinacao input:checked + label:before{
+    background-color: white;
+    box-sizing: border-box;
+    border: 7px solid rgb(255, 4, 159);
+    padding: 4px;
+}
+
+/* FORM */
+
+.DateTime{
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
