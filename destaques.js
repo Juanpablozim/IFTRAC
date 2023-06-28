@@ -75,3 +75,44 @@ function selectInput(list) {
     const id = list.getAttribute("data-id");
     window.location = "mais-informacoes/moreinfo.html?id=" + id;
 }
+
+/*
+    MOTORISTAS
+*/
+
+// Exibe as denúncias
+function exibirDenuncias() {
+    var denunciasContainer = document.getElementById('denuncias');
+    denunciasContainer.innerHTML = '';
+  
+    for (var i = 0; i < denuncias.length; i++) {
+      var denuncia = denuncias[i];
+  
+      var denunciaElement = document.createElement('div');
+      denunciaElement.classList.add('denuncia');
+      
+      if (denuncia.tipo == 1) {
+        denunciaElement.innerHTML = '<div class="info">Nome do Motorista: ' + denuncia.nome + '</div>' +
+          '<div class="info">Placa: ' + denuncia.placa + '</div>' +
+          '<div class="descricao">' + denuncia.ocorrencia + '</div>';
+      } else {
+        var horario = new Date(denuncia.horario);
+        var dataFormatada = horario.toLocaleDateString();
+        var horarioFormatado = horario.toLocaleTimeString();
+  
+        denunciaElement.innerHTML = '<div class="info">Nome do Motorista: ' + denuncia.nome + '</div>' +
+          '<div class="info">Linha: ' + denuncia.linha + '</div>' +
+          '<div class="info">Data: ' + dataFormatada + '</div>' +
+          '<div class="info">Horario: ' + horarioFormatado + '</div>' +
+          '<div class="descricao">' + denuncia.ocorrencia + '</div>';
+      }
+  
+      denunciasContainer.appendChild(denunciaElement);
+    }
+  }
+
+// Carregar denúncias ao carregar a página
+if (localStorage.getItem('denuncias')) {
+    denuncias = JSON.parse(localStorage.getItem('denuncias'));
+    exibirDenuncias();
+}

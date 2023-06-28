@@ -61,6 +61,12 @@ a {
   text-decoration: none;
 }
 
+.pontosD{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .destaque {
   margin-top: 30px;
   border-radius: 10px;
@@ -76,10 +82,13 @@ a {
 }
 
 .destacado {
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--cor-secundaria);
   border: 3px solid var(--cor-terciaria);
   border-radius: 10px;
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 10px;
 }
 
@@ -104,11 +113,51 @@ a {
   margin-bottom: 3px;
 }
 
+.destaque h5{
+  font-size: 20px;
+  text-align: center;
+  color: var(--cor-terciaria);
+  margin-top: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--cor-quarternaria);
+}
+
 #destacados {
-  max-height: calc(70vh - 30px);
+  max-height: calc(50vh - 30px);
   overflow-y: scroll;
 }
 
+
+/* MOTORISTAS */
+.motorista {
+  width: 80%;
+  max-height: calc(50vh - 30px);
+  overflow-y: scroll;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.denuncia {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.denuncia .info {
+  font-weight: bold;
+  color: #ff1493;
+  margin-bottom: 10px;
+}
+
+.denuncia .descricao {
+  color: #555;
+}
+
+
+
+/* RESPONSIVIDADE */
 @media screen and (min-width: 1201px) {
   .destaque h3{
     font-size: 20px;
