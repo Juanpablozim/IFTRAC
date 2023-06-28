@@ -41,7 +41,7 @@
 .btncadastrar{
   font-size: 20px;
   color: white;
-  width: 300px;
+  width: 350px;
   border: none;
   background-color: #ff00bf;
   height: 40px;
@@ -118,8 +118,26 @@ a {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 360px) and (max-width: 600px) {
   .destacado {
     font-size: 160px;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .destacado {
+    font-size: 160px;
+  }
+
+  .btncadastrar{
+    font-size: 12px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .navitem {
+    padding: 10px 20px 10px 20px;
+    font-size: 25px;
+    color: #ffffff;
   }
 }
