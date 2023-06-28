@@ -89,7 +89,7 @@ function algoescrito(){
 
 function display(result) {
     const content = result.map((item) => {
-        return "<li onclick='selectInput(this)' data-id='" + item.id + "'>" + item.rua + ", " + item.bairro + ", " + item.cidade + ", " + item.uf + "</li>";
+        return "<li onclick='selectInput(this)' data-id='" + item.id + "'>" + item.rua + " nº" + item.numero + ", " + item.bairro + ", " + item.cidade + ", " + item.uf + "</li>";
     });
 
     resultsBox.innerHTML = "<ul>" + content.join('') + "</ul>";

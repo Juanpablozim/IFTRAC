@@ -1,3 +1,10 @@
+:root {
+    --cor-primaria: rgb(255, 0, 119);
+    --cor-secundaria: #fff;
+    --cor-terciaria: rgb(255, 163, 206);
+    --cor-quarternaria: gray;
+}
+
 /*
     DOCUMENTO
 */
@@ -9,16 +16,15 @@
 }
 
 body {
-    background: pink;
-    color: palevioletred;
+    background: var(--cor-terciaria);
+    color: var(--cor-primaria);
 }
 
 /*
-    NAVBAR
+  NAVBAR
 */
-
 .navbar {
-    background: #ff00bf;
+    background-color: var(--cor-primaria);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -28,11 +34,7 @@ body {
 .navitem {
     padding: 10px 50px 10px 50px;
     font-size: 30px;
-    color: #ffffff;
-}
-
-.navitem i {
-    color: white;
+    color: var(--cor-secundaria);
 }
 
 .btnnavbar {
@@ -41,12 +43,18 @@ body {
     cursor: pointer;
 }
 
+.aplicacoes {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
 /*
     BARRA DE PESQUISA
 */
 .search-box {
     width: 80%;
-    background: aliceblue;
+    background: var(--cor-secundaria);
     margin: 50px auto 0;
     border-radius: 5px;
 }
@@ -64,7 +72,8 @@ input {
     border: 0;
     outline: 0;
     font-size: 18px;
-    color: palevioletred;
+    font-weight: 900;
+    color: var(--cor-primaria);
 }
 
 button {
@@ -75,32 +84,40 @@ button {
 
 button i {
     width: 25px;
-    color: palevioletred;
+    color: var(--cor-terciaria);
     font-size: 22px;
     cursor: pointer;
 }
 
 ::placeholder {
-    color: palevioletred;
+    color: var(--cor-terciaria);
 }
 
 .result-box ul {
-    border-top: 1px solid #999;
-    padding: 15px 10px;
+    text-align: center;
+    background-color: var(--cor-secundaria);
+    margin: 50px;
+    border-radius: 10px;
+    border: 1px solid var(--cor-quarternaria);
+    padding: 10px 10px;
 }
 
 .result-box ul li {
+    border-bottom: 1px solid var(--cor-quarternaria);
     list-style: none;
-    border-radius: 3px;
-    padding: 15px 10px;
+    padding: 20px 10px;
     cursor: pointer;
 }
 
-.result-box ul li:hover {
-    background: pink;
+.result-box ul li:last-child {
+    border-bottom: none;
 }
 
-.result-box {
+.result-box ul li:hover {
+    background: var(--cor-terciaria);
+}
+
+.result-box ul {
     max-height: 300px;
     overflow-y: scroll;
 }
