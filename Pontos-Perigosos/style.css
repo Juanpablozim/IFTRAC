@@ -1,5 +1,10 @@
 :root {
     --cor-primaria: rgb(255, 0, 119);
+    --cor-secundaria: aliceblue;
+    --cor-terciaria: white;
+    --cor-quarternaria: black;
+    --cor-quintenaria: gray;
+    --cor-sextiaria: rgb(237, 209, 255);
 }
 
 body{
@@ -8,7 +13,7 @@ body{
 }
 
 #formPontoPerigoso {
-    color: aliceblue;
+    color: var(--cor-secundaria);
     position: absolute;
     padding: 15px 3%;
     max-height: calc(100vh - 50px);
@@ -26,9 +31,9 @@ body{
 .formPonto{
     background: none;
     border: none;
-    border-bottom: 1px solid aliceblue;
+    border-bottom: 1px solid var(--cor-secundaria);
     outline: none;
-    color: white;
+    color: var(--cor-terciaria);
     font-size: 15px;
     width: 100%;
 }
@@ -46,15 +51,15 @@ body{
 .formPonto:valid ~ .labelPonto{
     top: -20px;
     font-size: 12px;
-    color: rgb(0, 0, 0);
+    color: var(--cor-quarternaria);
 }
 
 .botao{
     width: 100%;
     font-size: 16px;
     font-weight: bold;
-    background-color: white;
-    color: #e60084;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
     border: none;
     border-radius: 20px;
     height: 40px;
@@ -65,8 +70,8 @@ body{
     width: 100%;
     font-size: 16px;
     font-weight: bold;
-    background-color: white;
-    color: #e60084;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
     border: none;
     border-radius: 20px;
     height: 40px;
@@ -74,9 +79,9 @@ body{
 }
 
 .botao:hover{
-    border: solid white 1px;
+    border: solid var(--cor-terciaria) 1px;
     background-image: linear-gradient(to right, var(--cor-primaria), var(--cor-primaria));;
-    color: white;
+    color: var(--cor-terciaria);
 }
 
 .combinacao{
@@ -92,8 +97,8 @@ body{
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: white;
-    border: 1px solid gray;
+    background-color: var(--cor-terciaria);
+    border: 1px solid var(--cor-quintenaria);
     display: inline-block;
     vertical-align: middle;
     margin-right: 8px;
@@ -103,7 +108,7 @@ body{
 .combinacao input:checked + label:before{
     background-color: var(--cor-primaria);
     box-sizing: border-box;
-    border: 5px solid white;
+    border: 5px solid var(--cor-terciaria);
     padding: 4px;
 }
 
@@ -111,9 +116,9 @@ textarea{
     margin-top: 10px;
     resize: none;
     background: none;
-    border: 1px solid aliceblue;
+    border: 1px solid var(--cor-secundaria);
     outline: none;
-    color: white;
+    color: var(--cor-terciaria);
     font-size: 15px;
 }
 
@@ -131,18 +136,18 @@ textarea{
 .textarea:valid ~ .labelTA{
     top: -20px;
     font-size: 12px;
-    color: rgb(184, 0, 138);
+    color: var(--cor-primaria);
 }
 
 h1{
-  color: white;
+  color: var(--cor-terciaria);
   font-size: 20px;
   margin: 0px;
   padding: 0px;
 }
 
 .ponto{
-  border: 1px solid white;
+  border: 1px solid var(--cor-terciaria);
 }
 
 .inicial{
@@ -151,11 +156,11 @@ h1{
 }
 
 .inicial a{
-  color: rgb(138, 0, 103);
+  color: var(--cor-sextiaria);
 }
 
 #enviado{
-  color: #ff007b;
+  color: var(--cor-primaria);
   text-align: center;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
@@ -179,8 +184,8 @@ h1{
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: white;
-    border: 1px solid gray;
+    background-color: var(--cor-terciaria);
+    border: 1px solid var(--cor-quintenaria);
     display: inline-block;
     vertical-align: middle;
     margin-right: 8px;
@@ -190,7 +195,7 @@ h1{
 .combinacaolado input:checked + label:before{
     background-color: var(--cor-primaria);
     box-sizing: border-box;
-    border: 5px solid white;
+    border: 5px solid var(--cor-terciaria);
     padding: 4px;
 }
 
@@ -200,7 +205,7 @@ h1{
     border-radius: 10px;
     padding: 3px;
     margin: 3px;
-    background-color: white;
+    background-color: var(--cor-terciaria);
     color: var(--cor-primaria);
 }
 
