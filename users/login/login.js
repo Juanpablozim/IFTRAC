@@ -56,7 +56,7 @@ function login() {
     for (let i = 0; i < users.usuarios.length; i++) {
         if (users.usuarios[i].email === email && users.usuarios[i].senha === senha) {
             logar(users.usuarios[i].id);
-            window.location = "../index.html";
+            window.location = "../usuario/usuario.html";
             return;
         }
     }

@@ -1,8 +1,9 @@
 :root {
     --cor-primaria: rgb(255, 0, 119);
     --cor-secundaria: #fff;
-    --cor-terciaria: #505050;
-    --cor-quarternaria: gray;
+    --cor-terciaria: white;
+    --cor-quarternaria: #505050;
+    --cor-quintenaria: black;
 }
 
 * {
@@ -55,4 +56,171 @@
     margin-top: 10px;
     display: flex;
     justify-content: center;
+}
+
+
+/* CORPO */
+/*
+    USUARIO
+*/
+
+.foto {
+    text-align: center;
+}
+
+.userAvatar {
+    width: 20vmin;
+    height: 20vmin;
+    padding: 5vmin;
+    border-radius: 50%;
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    font-size: 20vmin;
+}
+
+.name {
+    font-size: 5vmin;
+    text-align: center;
+}
+
+.email {
+    color: var(--cor-quarternaria);
+    margin-top: 5px;
+    font-size: 5vmin;
+    text-align: center;
+}
+
+.denunciasP {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-height: calc(50vh - 30px);
+    overflow-y: scroll;
+}
+
+/*
+    DENUNCIAR
+*/
+.aplicacoes{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* botao de denuncia */
+.btncadastrar{
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--cor-secundaria);
+    width: 350px;
+    border: none;
+    background-color: var(--cor-primaria);
+    height: 40px;
+    border-radius: 30px;
+  }
+
+/*
+    DECUNCIAS
+*/
+
+.suasdenuncias {
+    border-top: 1px solid var(--cor-primaria);
+    margin-top: 50px;
+    text-align: center;
+    font-size: 5vmin;
+    color: var(--cor-primaria);
+}
+
+.identificador{
+    text-align: center;
+    font-size: 3vmin;
+    color: var(--cor-quarternaria);
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.destacado {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--cor-secundaria);
+    border: 3px solid var(--cor-quarternaria);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.denunciasP h2 {
+    text-align: center;
+    color: var(--cor-quarternaria);
+    font-size: 10px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--cor-quarternaria);
+}
+
+.denunciasP h3 {
+    text-align: center;
+    color: rgb(27, 27, 27);
+    font-size: 14px;
+}
+
+.denunciasP h4 {
+    color: var(--cor-primaria);
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.denunciasP h5 {
+    font-size: 20px;
+    text-align: center;
+    color: var(--cor-terciaria);
+    margin-top: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--cor-quarternaria);
+}
+
+/* MOTORISTAS */
+.motorista {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.denunciaM{
+    max-height: calc(50vh - 30px);
+    overflow-y: scroll;
+}
+
+.denunciasM {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.denunciasM .info {
+    font-weight: bold;
+    color: #ff1493;
+    margin-bottom: 10px;
+}
+
+.denunciasM .descricao {
+    color: #555;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (min-width: 1201px) {
+    .denunciasP h3 {
+        font-size: 20px;
+    }
+
+    .denunciasP h2 {
+        font-size: 24px;
+    }
 }

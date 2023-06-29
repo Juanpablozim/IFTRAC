@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,49 @@
     <title>Document</title>
     <link rel="stylesheet" href="usuario.css">
 </head>
-<body>
+
+<body onload="UserLogado()">
     <div class="navbar">
         <a href="../../index.html"><button class="btnnavbar"><i class="fa-solid fa-house navitem"></i></button></a>
-    
-        <a href="../../Pesquisa/pesquisa.html"><button class="btnnavbar"><i
-              class="fa-solid fa-magnifying-glass navitem"></i></a></button>
-    
-        <a href="#"><button id="loginNav" class="btnnavbar"><i class="fa-solid fa-user navitem"></i></button></a>
-      </div>
-      <div class="espaco-navbar"></div>
 
-      <div>Usuario</div>
+        <a href="../../Pesquisa/pesquisa.html"><button class="btnnavbar"><i
+                    class="fa-solid fa-magnifying-glass navitem"></i></a></button>
+
+        <a href="#"><button id="loginNav" class="btnnavbar"><i class="fa-solid fa-user navitem"></i></button></a>
+    </div>
+    <div class="espaco-navbar"></div>
+
+    <div class="usuario">
+        <div class="foto">
+            <i class="fa-solid fa-user userAvatar"></i>
+        </div>
+        <div id="name" class="name">Username</div>
+        <div id="email" class="email">email@mail.domain</div>
+    </div>
+
+    <div class="denunciar">
+        <div class="aplicacoes">
+            <a href="../../Pontos-Perigosos/PontosPerigosos.html"><button class="btncadastrar">Denunciar Ponto
+                    Perigoso</button></a>
+        </div>
+
+        <div class="aplicacoes">
+            <a href="../../Motoristas/index.html"><button class="btncadastrar">Denunciar Motorista Abusivo</button></a>
+        </div>
+    </div>
+
+    <div class="suasdenuncias"><i class="fa-solid fa-megaphone"></i>Suas Denúncias
+    </div>
+    <div class="ponto">
+        <div class="identificador">PONTOS</div>
+        <div id="denunciasPontosPerigosos" class="denunciasP"></div>
+    </div>
+    <div class="motorista">
+        <div class="identificador">MOTORISTAS</div>
+        <div id="denunciasMotoristas" class="denunciaM"></div>
+    </div>
+
+    <script src="usuario.js"></script>
 </body>
+
 </html>
