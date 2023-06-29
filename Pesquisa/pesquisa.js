@@ -107,3 +107,61 @@ function cleansearchbar(){
 }
 
 document.getElementById('btnclean').addEventListener('click', cleansearchbar);
+
+
+
+const lastLogin = 'LastLogin';
+
+/*
+    LOGIN
+*/
+let logado = false;
+let ultimoLogin;
+
+function validate () {
+    let strDados = localStorage.getItem(lastLogin);
+    let objDados = {};
+
+    if (strDados) {
+        objDados = JSON.parse(strDados);
+        ultimoLogin = objDados.login[0].id;
+
+        if ((Date.now() - objDados.login[0].horario) < 1800000) {
+            return true;
+        }else{
+            return false;
+        }
+    }else{
+        return false;
+    }
+}
+
+function leUsuarios() {
+    let strDados = localStorage.getItem(usersDB);
+    let objDados = {};
+
+    if (strDados) {
+        objDados = JSON.parse(strDados);
+    }
+    else {
+        objDados = {
+            usuarios: [
+                { email: "gabriel@gmail.com", nome: "Gabriel", sobrenome: "Quaresma", senha: "Gabriel10" }
+            ]
+        }
+    }
+
+    return objDados;
+}
+
+function UserLogado ( userid ) {
+    logado = validate();
+    let users = leUsuarios();
+
+    let imglogin = document.getElementById("loginNav");
+
+    if (logado) {
+        imglogin.innerHTML = `<div class="navitem navlogged">${users.usuarios[ultimoLogin-1].nome}</div>`;
+    }
+
+}

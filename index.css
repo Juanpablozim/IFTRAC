@@ -32,9 +32,17 @@
 }
 
 .navitem {
+  overflow: hidden;
+  max-height: 30px;
+  max-width: 50px;
   padding: 10px 50px 10px 50px;
   font-size: 30px;
   color: var(--cor-secundaria);
+}
+
+.navlogged{
+  padding: 10px 50px 10px 0px;
+  font-size: 18px;
 }
 
 .btnnavbar {

@@ -190,8 +190,13 @@ class Validator {
 
 }
 
+
+
+
+const usersDB = 'WAusers';
+
 function leDados () {
-    let strDados = localStorage.getItem('db');
+    let strDados = localStorage.getItem(usersDB);
     let objDados = {};
 
     if (strDados) {
@@ -199,7 +204,7 @@ function leDados () {
     }
     else {
         objDados = { usuarios: [ 
-                        {email: "gabriel@gmail.com",nome: "Gabriel", sobrenome: "Quaresma", senha: "Gabriel10"}
+                        {id: 1, email: "gabriel@gmail.com",nome: "Gabriel", sobrenome: "Quaresma", senha: "Gabriel10"}
                     ]}
     }
 
@@ -207,7 +212,7 @@ function leDados () {
 }
 
 function salvaDados (dados) {
-    localStorage.setItem ('db', JSON.stringify (dados));
+    localStorage.setItem (usersDB, JSON.stringify (dados));
 }
 
 function incluirUsuario (){
@@ -218,8 +223,13 @@ function incluirUsuario (){
     let strEmail = document.getElementById ('email').value;
     let strNome = document.getElementById ('name').value;
     let strSobrenome = document.getElementById ('lastname').value;
+    
+    //calculo de novo id
+    let idvalue = objDados.usuarios[(objDados.usuarios.length-1)].id + 1;
+
   let strSenha = document.getElementById ('password').value;
     let novoUsuario = {
+        id: idvalue,
         email: strEmail,
         nome: strNome,
         sobrenome: strSobrenome,
@@ -256,4 +266,5 @@ submit.addEventListener('click', function(e) {
     incluirUsuario();
     ResetarOsFormularios(form);
   }
+  window.location = "../login.html";
 });
