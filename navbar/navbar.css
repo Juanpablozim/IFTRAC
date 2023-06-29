@@ -1,0 +1,50 @@
+:root {
+  --cor-primaria: rgb(255, 0, 119);
+  --cor-secundaria: #fff;
+  --cor-terciaria: #505050;
+  --cor-quarternaria: gray;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*
+  NAVBAR
+*/
+.espaco-navbar{
+  margin-top: 50px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--cor-primaria);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure the navbar appears above other elements */
+}
+
+.navitem {
+  padding: 10px 50px 10px 50px;
+  font-size: 30px;
+  color: var(--cor-secundaria);
+}
+
+.btnnavbar {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.aplicacoes{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}

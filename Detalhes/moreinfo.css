@@ -17,12 +17,21 @@
   NAVBAR
 */
 
+.espaco-navbar{
+  margin-top: 70px;
+}
+
 .navbar {
-  background: var(--cor-primaria);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--cor-primaria);
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 999;
 }
 
 .navitem {
