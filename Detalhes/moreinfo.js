@@ -165,6 +165,7 @@ function enviarComentario() {
                 "userid": ultimoLogin,
                 "ittenid": ittenid,
                 "nome": users.usuarios[ultimoLogin-1].nome,
+                "sobrenome": users.usuarios[ultimoLogin-1].sobrenome,
                 "comentario": comentario
             };
             comentarios.comentarios.push(novoComentario);
@@ -183,7 +184,7 @@ function atualizarComentarios() {
     for (var i = 0; i < comentarios.comentarios.length; i++) {
         var comentario = comentarios.comentarios[i];
         if (comentario.ittenid == idrecebido) {
-            comenttxt += `<div class="loadedcomment"><strong>${comentario.nome}: </strong>${comentario.comentario}</div>`;
+            comenttxt += `<div class="loadedcomment"><strong>${comentario.nome} ${comentario.sobrenome}: </strong>${comentario.comentario}</div>`;
         }
     }
 

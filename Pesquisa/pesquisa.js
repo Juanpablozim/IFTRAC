@@ -53,7 +53,7 @@ const inputBox = document.getElementById("input-box");
 const goSearchButton = document.getElementById("gosearch");
 const cleanSearchButton = document.getElementById("cleansearch");
 
-inputBox.onkeyup = function() {
+inputBox.onkeyup = function filtrar() {
     let result = [];
     let input = inputBox.value.trim().toLowerCase();
 

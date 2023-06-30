@@ -1,3 +1,22 @@
+const usersDB = 'WAusers';
+
+function leDados () {
+    let strDados = localStorage.getItem(usersDB);
+    let objDados = {};
+
+    if (strDados) {
+        objDados = JSON.parse (strDados);
+    }
+    else {
+        objDados = { usuarios: [ 
+                        {id: 1, email: "gabriel@gmail.com",nome: "Gabriel", sobrenome: "Quaresma", senha: "Gabriel10"},
+                        {id: 2, email: "address@email.domain",nome: "Óscar", sobrenome: "da Silva Oliveira", senha: "Senha123"}
+                    ]}
+    }
+
+    return objDados;
+}
+
 let errorMessage = '';
 
 class Validator {
@@ -102,6 +121,7 @@ class Validator {
 
     let email = input.value;
 
+    let strDados = leDados();
      
 
     if(!re.test(email)) {
@@ -109,6 +129,14 @@ class Validator {
       this.printMessage(input, errorMessage);
     }
 
+      for (var i = 0; i < strDados.usuarios.length; i++)
+      {
+          if (email === strDados.usuarios[i].email) 
+          {
+            errorMessage = `Esse email já esta cadastrado`;
+            this.printMessage(input, errorMessage);
+          }
+      }
   }
 
   // verificar se um campo está igual o outro
@@ -190,28 +218,6 @@ class Validator {
 
 }
 
-
-
-
-const usersDB = 'WAusers';
-
-function leDados () {
-    let strDados = localStorage.getItem(usersDB);
-    let objDados = {};
-
-    if (strDados) {
-        objDados = JSON.parse (strDados);
-    }
-    else {
-        objDados = { usuarios: [ 
-                        {id: 1, email: "gabriel@gmail.com",nome: "Gabriel", sobrenome: "Quaresma", senha: "Gabriel10"},
-                        {id: 2, email: "address@email.domain",nome: "Óscar", sobrenome: "da Silva Oliveira", senha: "Senha123"}
-                    ]}
-    }
-
-    return objDados;
-}
-
 function salvaDados (dados) {
     localStorage.setItem (usersDB, JSON.stringify (dados));
 }
@@ -266,6 +272,6 @@ submit.addEventListener('click', function(e) {
   {
     incluirUsuario();
     ResetarOsFormularios(form);
+    window.location = "../login/login.html";
   }
-  window.location = "../login/login.html";
 });

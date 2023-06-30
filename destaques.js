@@ -153,7 +153,7 @@ var denunciasContainer = document.getElementById('denuncias');
   function exibirDenuncias() {
     denunciasContainer.innerHTML = '';
 
-    for (var i = 0; i < denuncias.denuncia.length; i++) {
+    for (var i = (denuncias.denuncia.length-1); i >= 0; i--) {
       var denuncia = denuncias.denuncia[i];
 
       var denunciaElement = document.createElement('div');

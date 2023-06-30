@@ -144,7 +144,7 @@ function printData() {
     }
 
     if (escrito) {
-        strHTML = "Você ainda nâo possui denúncias";
+        strHTML = "Você ainda não possui denúncias";
     }
 
     divdenuncias.innerHTML = strHTML;
