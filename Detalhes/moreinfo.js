@@ -1,3 +1,64 @@
+/*
+    LOGIN
+*/
+const usersDB = 'WAusers';
+const lastLogin = 'LastLogin';
+let logado = false;
+let ultimoLogin;
+let users;
+
+function validate() {
+    let strDados = localStorage.getItem(lastLogin);
+    let objDados = {};
+
+    if (strDados) {
+        objDados = JSON.parse(strDados);
+        ultimoLogin = objDados.login[0].id;
+
+        if ((Date.now() - objDados.login[0].horario) < 1800000) {
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+}
+
+function leUsuarios() {
+    let strDados = localStorage.getItem(usersDB);
+    let objDados = {};
+
+    if (strDados) {
+        objDados = JSON.parse(strDados);
+    }
+    else {
+        objDados = {
+            usuarios: [
+                { email: "gabriel@gmail.com", nome: "Gabriel", sobrenome: "Quaresma", senha: "Gabriel10" }
+            ]
+        }
+    }
+
+    return objDados;
+}
+
+function loadUser() {
+    let validacao = validate();
+
+    if (!validacao) {
+        window.location = "../users/central.html";
+    }else{
+        users = leUsuarios();
+    }
+
+    return validacao;
+}
+
+/*
+    PONTOS PERIGOSOS
+*/
+
 const dbUP = 'unsafePoints';
 
 function leDados() {
@@ -63,27 +124,28 @@ function carregaDados() {
     }
 
     display(result);
+    if(!validate()){
+        document.getElementById("logincomentario").innerHTML = `<div class="logincomentario">Faça <a href="../users/central.html">login</a> para comentar nesta denúncia!</div>`;
+    }
 }
 
 function display(result) {
     if (result.length > 0) {
         let strtipo = '';
 
-        if ( result[0].tipo == 'ponto' ){
+        if (result[0].tipo == 'ponto') {
             strtipo = 'Ponto de ônibus';
-        }else{
+        } else {
             strtipo = 'Local de espera de motorista de aplicativo';
         }
         const strendereco = result[0].rua + '<p></p>Número: ' + result[0].numero + '<p></p>' + result[0].bairro + ', ' + result[0].cidade + '<p></p>' + result[0].uf;
         const strmaisinfo = result[0].more;
 
-        tipoDiv.innerHTML  = strtipo;
+        tipoDiv.innerHTML = strtipo;
         endereco.innerHTML = strendereco;
         maisinfo.innerHTML = strmaisinfo;
     }
 }
-
-carregaDados();
 
 // JSON com os comentários
 var comentarios = {
@@ -92,20 +154,23 @@ var comentarios = {
 
 // Função para enviar o comentário
 function enviarComentario() {
-    var id = 1;
-    var ittenid = idrecebido;
-    var nome = 'Username';
-    var comentario = document.getElementById("comentario").value;
-    if (nome !== "" && comentario !== "") {
-        var novoComentario = {
-            "id": id,
-            "ittenid": ittenid,
-            "nome": nome,
-            "comentario": comentario
-        };
-        comentarios.comentarios.push(novoComentario);
-        document.getElementById("comentario").value = "";
-        atualizarComentarios();
+    if (loadUser()) {
+        var id = 1;
+        var ittenid = idrecebido;
+        var nome = 'Username';
+        var comentario = document.getElementById("comentario").value;
+        if (nome !== "" && comentario !== "") {
+            var novoComentario = {
+                "id": id,
+                "userid": ultimoLogin,
+                "ittenid": ittenid,
+                "nome": users.usuarios[ultimoLogin-1].nome,
+                "comentario": comentario
+            };
+            comentarios.comentarios.push(novoComentario);
+            document.getElementById("comentario").value = "";
+            atualizarComentarios();
+        }
     }
 }
 
@@ -114,16 +179,16 @@ function atualizarComentarios() {
     var listaComentarios = document.getElementById("listaComentarios");
 
     let comenttxt = "";
-    
+
     for (var i = 0; i < comentarios.comentarios.length; i++) {
         var comentario = comentarios.comentarios[i];
-        if ( comentario.ittenid == idrecebido ) {
+        if (comentario.ittenid == idrecebido) {
             comenttxt += `<div class="loadedcomment"><strong>${comentario.nome}: </strong>${comentario.comentario}</div>`;
         }
     }
 
     listaComentarios.innerHTML = comenttxt;
-    
+
     localStorage.setItem("comentarios", JSON.stringify(comentarios));
 }
 

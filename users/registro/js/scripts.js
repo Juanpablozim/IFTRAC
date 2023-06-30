@@ -266,5 +266,5 @@ submit.addEventListener('click', function(e) {
     incluirUsuario();
     ResetarOsFormularios(form);
   }
-  window.location = "../login.html";
+  window.location = "../login/login.html";
 });

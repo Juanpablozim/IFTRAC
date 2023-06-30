@@ -56,6 +56,13 @@ function UserLogado() {
 
 }
 
+function logoff() {
+    localStorage.removeItem("LastLogin");
+    window.location = "../login/login.html";
+}
+
+document.getElementById("btnlogoff").addEventListener("click", logoff);
+
 /*
     DENUNCIAS
 */

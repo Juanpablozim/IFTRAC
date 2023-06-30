@@ -101,14 +101,14 @@
 /*
     DENUNCIAR
 */
-.aplicacoes{
+.aplicacoes {
     margin-top: 10px;
     display: flex;
     justify-content: center;
 }
 
 /* botao de denuncia */
-.btncadastrar{
+.btncadastrar {
     cursor: pointer;
     font-size: 20px;
     color: var(--cor-secundaria);
@@ -117,7 +117,24 @@
     background-color: var(--cor-primaria);
     height: 40px;
     border-radius: 30px;
-  }
+}
+
+/*
+    LOGOFF
+*/
+.logoff {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.btnlogoff {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--cor-quarternaria);
+    color: var(--cor-secundaria);
+}
 
 /*
     DECUNCIAS
@@ -131,7 +148,7 @@
     color: var(--cor-primaria);
 }
 
-.identificador{
+.identificador {
     text-align: center;
     font-size: 3vmin;
     color: var(--cor-quarternaria);
@@ -191,7 +208,7 @@ a {
     margin-right: auto;
 }
 
-.denunciaM{
+.denunciaM {
     max-height: calc(50vh - 30px);
     overflow-y: scroll;
 }
@@ -212,6 +229,24 @@ a {
 
 .denunciasM .descricao {
     color: #555;
+}
+
+/*
+  RODAPÉ
+*/
+.rodape {
+    padding: 30px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    display: flex;
+    align-items: center;
+}
+
+.mensagem,
+.autores {
+    flex-basis: 50%;
+    text-align: center;
+    margin: 0;
 }
 
 /* RESPONSIVIDADE */

@@ -14,7 +14,7 @@
 /*
   NAVBAR
 */
-.espaco-navbar{
+.espaco-navbar {
   margin-top: 70px;
 }
 
@@ -40,7 +40,7 @@
   color: var(--cor-secundaria);
 }
 
-.navlogged{
+.navlogged {
   padding: 10px 50px 10px 0px;
   font-size: 18px;
 }
@@ -51,10 +51,26 @@
   cursor: pointer;
 }
 
-.aplicacoes{
+.aplicacoes {
   margin-top: 10px;
   display: flex;
   justify-content: center;
+}
+
+/*
+  WOMAN ANGEL
+*/
+
+.woman-angel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.woman-angel img {
+  margin-bottom: 10px;
 }
 
 /*
@@ -62,7 +78,7 @@
 */
 
 /* botao de denuncia */
-.btncadastrar{
+.btncadastrar {
   cursor: pointer;
   font-size: 20px;
   color: var(--cor-secundaria);
@@ -79,7 +95,7 @@ a {
   text-decoration: none;
 }
 
-.pontosD{
+.pontosD {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -93,7 +109,7 @@ a {
   margin-right: 10px;
 }
 
-.destaque h1{
+.destaque h1 {
   margin: 10px;
   color: var(--cor-primaria);
   text-align: center;
@@ -110,7 +126,7 @@ a {
   padding: 10px;
 }
 
-.destaque h2{
+.destaque h2 {
   text-align: center;
   color: var(--cor-terciaria);
   font-size: 10px;
@@ -119,19 +135,19 @@ a {
   border-bottom: 1px solid var(--cor-quarternaria);
 }
 
-.destaque h3{
+.destaque h3 {
   text-align: center;
   color: rgb(27, 27, 27);
   font-size: 14px;
 }
 
-.destaque h4{
+.destaque h4 {
   color: var(--cor-primaria);
   font-size: 14px;
   margin-bottom: 3px;
 }
 
-.destaque h5{
+.destaque h5 {
   font-size: 20px;
   text-align: center;
   color: var(--cor-terciaria);
@@ -173,16 +189,42 @@ a {
   color: #555;
 }
 
+/*
+  RODAPÉ
+*/
+.rodape {
+  padding: 30px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+  display: flex;
+  align-items: center;
+}
+
+.mensagem,
+.autores {
+  flex-basis: 50%;
+  text-align: center;
+  margin: 0;
+}
+
 
 
 /* RESPONSIVIDADE */
 @media screen and (min-width: 1201px) {
-  .destaque h3{
+  .destaque h3 {
     font-size: 20px;
   }
-  
-  .destaque h2{
+
+  .destaque h2 {
     font-size: 24px;
+  }
+
+  .woman-angel img {
+    width: 150px;
+  }
+
+  .woman-angel {
+    font-size: 50px;
   }
 }
 
@@ -190,11 +232,27 @@ a {
   .destacado {
     font-size: 200px;
   }
+
+  .woman-angel img {
+    width: 100px;
+  }
+
+  .woman-angel {
+    font-size: 40px;
+  }
 }
 
 @media screen and (min-width: 360px) and (max-width: 600px) {
   .destacado {
     font-size: 160px;
+  }
+
+  .woman-angel img {
+    width: 80px;
+  }
+
+  .woman-angel {
+    font-size: 30px;
   }
 }
 
@@ -203,7 +261,7 @@ a {
     font-size: 160px;
   }
 
-  .btncadastrar{
+  .btncadastrar {
     font-size: 12px;
     width: 100%;
     padding: 10px;
@@ -213,5 +271,13 @@ a {
     padding: 10px 20px 10px 20px;
     font-size: 25px;
     color: var(--cor-secundaria);
+  }
+
+  .woman-angel img {
+    width: 70px;
+  }
+
+  .woman-angel {
+    font-size: 20px;
   }
 }
