@@ -204,7 +204,8 @@ function leDados () {
     }
     else {
         objDados = { usuarios: [ 
-                        {id: 1, email: "gabriel@gmail.com",nome: "Gabriel", sobrenome: "Quaresma", senha: "Gabriel10"}
+                        {id: 1, email: "gabriel@gmail.com",nome: "Gabriel", sobrenome: "Quaresma", senha: "Gabriel10"},
+                        {id: 2, email: "address@email.domain",nome: "Óscar", sobrenome: "da Silva Oliveira", senha: "Senha123"}
                     ]}
     }
 
