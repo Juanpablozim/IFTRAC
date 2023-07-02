@@ -1,7 +1,7 @@
 const upDB = 'unsafePoints';
 
 function leDados() {
-    let strDados = localStorage.getItem('upDB');
+    let strDados = localStorage.getItem(upDB);
     let objDados = {};
 
     if (strDados) {
